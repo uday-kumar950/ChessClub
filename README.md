@@ -6,6 +6,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version => `ruby-3.1.2`
+* Rails version => `Rails 7.0.3`
 
 * System dependencies => `bundle install`
 
