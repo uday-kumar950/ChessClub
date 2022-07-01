@@ -5,20 +5,17 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version => `ruby-3.1.2`
 
 * System dependencies
 
 * Configuration
 
-* Database creation
-
-* Database initialization
+* Database creation => `rake db:create db:migrate`
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+ `rspec spec/controllers/members_controller_spec.rb`
+ 
+ `rspec spec/controllers/match_results_controller_spec.rb`
 
 * ...
