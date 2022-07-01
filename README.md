@@ -7,9 +7,7 @@ Things you may want to cover:
 
 * Ruby version => `ruby-3.1.2`
 
-* System dependencies
-
-* Configuration
+* System dependencies => `bundle install`
 
 * Database creation => `rake db:create db:migrate`
 
