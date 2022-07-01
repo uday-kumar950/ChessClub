@@ -1,0 +1,30 @@
+
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Match Results</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First Player</th>
+      <th>Second Player</th>
+      <th>Result</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @match_results.each do |match_result| %>
+      <tr>
+        <td><%= match_result.first_player.fullnames_with_rank %></td>
+        <td><%= match_result.second_player.fullnames_with_rank %></td>
+        <td><%= match_result.result %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create new match result', new_match_result_path %> | <%= link_to 'All Players', members_path%>

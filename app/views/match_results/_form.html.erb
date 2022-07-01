@@ -1,0 +1,32 @@
+<%= form_with(model: @match_result) do |form| %>
+  <% if @match_result.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@match_result.errors.count, "error") %> prohibited this match_result from being saved:</h2>
+
+      <ul>
+        <% @match_result.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :first_player, style: "display: block" %>
+    <%= form.collection_select :first_player, @members , :id, :fullnames_with_rank, {prompt: "Select"}, autofocus:true, class: "form-control", id: "user", required: true %>
+  </div>
+
+  <div>
+    <%= form.label :second_player, style: "display: block" %>
+    <%= form.collection_select :second_player, @members , :id, :fullnames_with_rank, {prompt: "Select"}, autofocus:true, class: "form-control", id: "user", required: true %>
+  </div>
+
+  <div>
+    <%= label_tag :winner,nil, style: "display: block" %>
+    <%= select_tag :winner, options_for_select([['Draw','Draw'], ['First Player Won', 'First Player Won'], ['Second Player Won', 'Second Player Won']]),required: true %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

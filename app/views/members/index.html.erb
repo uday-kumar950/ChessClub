@@ -1,0 +1,38 @@
+
+
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Members </h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Second Name</th>
+      <th>DOB</th>
+      <th>Email</th>
+      <th>Current Rank</th>
+      <th>No. of Games Played</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.first_name%></td>
+        <td><%= member.last_name %></td>
+        <td><%= member.dob %></td>
+        <td><%= member.email %></td>
+        <td><%= member.current_rank %></td>
+        <td><%= member.no_of_played_games%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create new member', new_member_path %> |
+<%= link_to 'All Match Results', match_results_path%>
